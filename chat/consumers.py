@@ -103,8 +103,8 @@ def chat_leave(message):
 
 #USER SENT A MESSAGE
 
-@channel_session_user
-@catch_client_error
+#@channel_session_user
+#@catch_client_error
 def chat_send(message):
     if int(message['room']) not in message.channel_session['rooms']:
         raise ClientError("ROOM_ACCESS_DENIED")
