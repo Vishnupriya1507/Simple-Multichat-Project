@@ -11,9 +11,12 @@ class Room(models.Model):
     """
     A room for people to chat in.
     """
+    types = models.CharField(max_length=100, default="Closed")
     title = models.CharField(max_length=255)
     staff_only = models.BooleanField(default=False)
+    status = models.BooleanField(default = 1)
 
+    
     def str(self):
         return self.title
 
